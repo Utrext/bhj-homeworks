@@ -9,15 +9,15 @@ function getHole(index) {
 for (let i = 1; i <= 9; i++) {
 	
 	let game = getHole(i);
-	let holeContains = getHole(i).className.includes("hole_has-mole");
   
 	game.onclick = function () {
+		
+		let holeContains = getHole(i).className.includes("hole_has-mole");
 	 
 		if(holeContains)
 			dead.textContent++;
 		else 
 			lost.textContent++;
-		
 			
 		if(dead.textContent == 10) {
 			alert("Вы выиграли!");
